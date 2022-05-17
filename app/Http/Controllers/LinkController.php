@@ -15,8 +15,15 @@ class LinkController extends Controller
      */
     public function index()
     {
-        //
+
     }
+
+    public function short(Request $request)
+    {
+        $this->create($request);
+
+    }
+
 
     /**
      * Show the form for creating a new resource.

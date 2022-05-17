@@ -28,8 +28,10 @@
                     <source src="{{asset("/assets/homeIcon.mp4")}}">
                 </video>
             </div>
-
-            <input type="text" class="form-control" id="url">
+            <form action="{{route('short.url')}}" method="post" id="form">
+                @csrf
+                <input type="text" class="form-control" id="url" name="link">
+            </form>
         </div>
     </div>
 </div>
@@ -47,6 +49,7 @@
                 console.log("asdf");
                 $('#homepageDiv').fadeIn();
                 $('#homepageVideo').trigger('play');
+                $('#form').submit();
             }
         })
     })

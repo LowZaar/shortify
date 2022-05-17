@@ -10,5 +10,6 @@ class Link extends Model
     use HasFactory;
 
     protected $primaryKey = "link_id";
+    protected $fillable = ['link', 'hash'];
 
 }
