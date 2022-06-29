@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('mainPage');
 });
+Route::get('/{hash}', 'LinkController@redirect');
+
 
 Route::post('/short', [LinkController::class, 'short'])->name('short.url');
 

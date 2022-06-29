@@ -45,6 +45,14 @@ class LinkController extends Controller
         ]);
     }
 
+    public function redirect($hash){
+        $link = DB::table('links')
+            ->where('link', '=', $hash)
+            ->get();
+
+        return Redirect::to($link['link']);
+    }
+
     /**
      * Store a newly created resource in storage.
      *

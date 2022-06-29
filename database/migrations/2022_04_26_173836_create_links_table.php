@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('links', function (Blueprint $table) {
             $table->id();
+            $table->text('link');
+            $table->string('hash');
+            $table->string('visits')->default(0);
             $table->timestamps();
         });
     }
